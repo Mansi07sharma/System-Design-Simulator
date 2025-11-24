@@ -66,7 +66,9 @@ app.get('/auth/google/callback',
     })
 
     // Successful authentication, redirect home.
-    res.redirect('http://localhost:5173/auth/callback');
+    // res.redirect('http://localhost:5173/auth/callback');
+    res.redirect('https://system-design-simulator-smoky.vercel.app/auth/callback');
+
   });
 
 app.get('/logout', (req, res) => {
@@ -74,7 +76,8 @@ app.get('/logout', (req, res) => {
     req.session.destroy();
     res.clearCookie('connect.sid');
     console.log("User logged out");
-    res.redirect('http://localhost:5173/');
+    // res.redirect('http://localhost:5173/');
+    res.redirect('https://system-design-simulator-smoky.vercel.app/');
   })
 })
 
@@ -101,7 +104,8 @@ app.get('/designs', async (req, res) => {
 app.post('/saveDesign', async (req, res) => {
   const email = req.query.userEmail
   if (!email) {
-    redirect('http://localhost:5173/login')
+    // redirect('http://localhost:5173/login')
+    redirect('https://system-design-simulator-smoky.vercel.app/login')
   }
 
   const design = req.body;
