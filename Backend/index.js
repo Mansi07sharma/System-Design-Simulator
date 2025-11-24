@@ -160,7 +160,7 @@ app.post('/loginUser', async (req, res) => {
     // Setting token in cookie(becuase of safety, in query risk of leak user data)
     res.cookie('token', token, {
       httpOnly: true,
-      secure: false, // set to true if using https 
+      secure: true, // set to true if using https 
       sameSite: 'lax',
       maxAge: 24 * 60 * 60 * 1000 // 1 day
     })
