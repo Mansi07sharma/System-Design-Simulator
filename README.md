@@ -50,7 +50,7 @@ The simulator instantly shows:
 
 ### **Secure Authentication**
 Multiple login options:
-- 🟢 **Google OAuth 2.0**
+- 🟢 **Google OAuth 2.0 (Passport.js)**
 - 📧 **Email/Password** (JWT-based)
 - 🔒 **Bcrypt password encryption**
 - 🔑 **JWT token management** (access + refresh tokens)
