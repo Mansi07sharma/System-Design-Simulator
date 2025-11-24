@@ -21,10 +21,7 @@ console.log("Connected to MongoDB");
 
 const app = express()
 app.use(cors({
-  origin: [
-    "http://localhost:5173",
-    "https://system-design-simulator-smoky.vercel.app"
-  ],
+  origin: "https://system-design-simulator-smoky.vercel.app",
   credentials: true
 }));
 app.use(bodyParser.json());
@@ -32,7 +29,7 @@ app.use(session({
   secret: 'MansiSDSSecret',
   resave: false,
   saveUninitialized: false,
-  cookie: { secure: false } //for localhost if production use true with https
+  cookie: { secure: true } //for localhost if production use true with https
 }));
 app.use(passport.initialize());
 app.use(passport.session());
@@ -60,7 +57,7 @@ app.get('/auth/google/callback',
     // Setting token in cookie(becuase of safety, in query risk of leak user data)
     res.cookie('token', token, {
       httpOnly: true,
-      secure: false, // set to true if using https 
+      secure: true, // set to true if using https 
       sameSite: 'lax',
       maxAge: 24 * 60 * 60 * 1000 // 1 day
     })
