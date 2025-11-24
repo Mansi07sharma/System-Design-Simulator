@@ -10,7 +10,6 @@ import dotenv from 'dotenv';
 import jwt from 'jsonwebtoken';
 import cookieParser from 'cookie-parser';
 import Design from './models/Design.model.js';
-import { redirect } from 'react-router-dom';
 import User from './models/User.model.js';
 import bcrypt from "bcrypt";
 
@@ -102,7 +101,7 @@ app.post('/saveDesign', async (req, res) => {
   const email = req.query.userEmail
   if (!email) {
     // redirect('http://localhost:5173/login')
-    return redirect('https://system-design-simulator-smoky.vercel.app/login')
+    return res.redirect('https://system-design-simulator-smoky.vercel.app/login')
   }
 
   const design = req.body;
