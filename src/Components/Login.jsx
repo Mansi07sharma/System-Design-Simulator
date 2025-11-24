@@ -15,7 +15,7 @@ export default function Login() {
   const handleLogin = async (e) => {
     e.preventDefault();
     setLogining(true)
-    let response = await fetch("https://system-design-simulator-production.up.railway.app/loginUser", {
+    let response = await fetch("https://shimmering-nature-production.up.railway.app/loginUser", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         credentials: "include", 
