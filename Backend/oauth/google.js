@@ -8,7 +8,7 @@ dotenv.config();
 passport.use(new GoogleStrategy({
     clientID: process.env.GOOGLE_CLIENT_ID,
     clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-    callbackURL: "https://system-design-simulator-smoky.vercel.app/auth/google/callback"
+    callbackURL: "https://shimmering-nature-production.up.railway.app/auth/google/callback"
   },
   async function(accessToken, refreshToken, profile, cb) {
     let user = await User.findOne({email: profile.emails[0].value});
