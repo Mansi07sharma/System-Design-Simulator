@@ -28,7 +28,7 @@ app.use(session({
   secret: 'MansiSDSSecret',
   resave: false,
   saveUninitialized: false,
-  cookie: { secure: true } //for localhost if production use true with https
+  cookie: { secure: true , sameSite: 'none'} //for localhost if production use true with https
 }));
 app.use(passport.initialize());
 app.use(passport.session());
