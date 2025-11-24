@@ -38,7 +38,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 app.use(cookieParser());
 
-const port = 3000
+const port = process.env.PORT || 3000;
 
 app.get('/auth/google',
   passport.authenticate('google', { scope: ['profile', 'email'], prompt: 'select_account' }));
