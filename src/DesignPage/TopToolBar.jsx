@@ -44,11 +44,6 @@ function TopToolBar({ designTitle, setDesignTitle, isDarkMode, setIsDarkMode ,wo
                     Save
                 </button>
 
-                <button className={`${isDarkMode ? 'bg-gray-700 hover:bg-gray-600 text-white' : 'bg-gray-100 hover:bg-gray-200 text-gray-700'} px-4 py-2 rounded-lg font-medium transition-colors whitespace-nowrap cursor-pointer`}>
-                    <i className="ri-download-line w-4 h-4 items-center justify-center mr-2 inline-flex"></i>
-                    Export
-                </button>
-
                 <button onClick={onClear} className={`${isDarkMode ? 'text-red-400 hover:bg-red-900/20' : 'text-red-600 hover:bg-red-50'} px-4 py-2 rounded-lg font-medium transition-colors whitespace-nowrap cursor-pointer`}>
                     <i className="ri-delete-bin-line w-4 h-4 items-center justify-center mr-2 inline-flex"></i>
                     Clear
