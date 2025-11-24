@@ -21,7 +21,7 @@ console.log("Connected to MongoDB");
 
 const app = express()
 app.use(cors({
-  origin: "https://system-design-simulator-smoky.vercel.app",
+  origin: "https://system-design-simulator-smoky.vercel.app/",
   credentials: true
 }));
 app.use(bodyParser.json());
