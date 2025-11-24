@@ -9,7 +9,7 @@ export function JwtProvider({ children }) {
 
     const fetchToken = async () => {
         setLoadingJwt(true);
-        const token = await fetch('http://localhost:3000/api/me', {
+        const token = await fetch('https://system-design-simulator-production.up.railway.app/api/me', {
             method: 'GET',
             credentials: 'include' //needed bcz http cookies will not go with fetch untill you specify
         })
