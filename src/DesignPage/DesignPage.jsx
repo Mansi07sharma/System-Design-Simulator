@@ -78,7 +78,7 @@ function DesignPage() {
     console.log("edges", edges);
     const simulationParams = { nodes, edges, workloadRps, slaLatencyMs };
     setIsSimulating(true);
-    const response = await fetch('http://localhost:3000/start-simulation', {
+    const response = await fetch('https://system-design-simulator-production.up.railway.app/start-simulation', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -132,7 +132,7 @@ function DesignPage() {
     }
 
     console.log("Design to be saved:", design);
-    await fetch('http://localhost:3000/saveDesign',
+    await fetch('https://system-design-simulator-production.up.railway.app/saveDesign',
       {
         method: 'POST',
         headers: {
