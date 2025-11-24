@@ -29,14 +29,14 @@ export default function HeroSection() {
             
             <div className="flex sm:flex-row gap-4 justify-center lg:justify-start">
               <NavLink 
-                to="/dashboard" 
+                to="/login" 
                 className="bg-blue-600 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center whitespace-nowrap cursor-pointer"
               >
                 Get Started Free
               </NavLink>
               
               <NavLink 
-                to="/demo" 
+                to="/design" 
                 className={`${isDarkMode ? 'bg-gray-800 text-blue-400 border-blue-400 hover:bg-gray-700' : 'bg-white text-blue-600 border-blue-600 hover:bg-blue-50'} px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold border-2 transition-colors text-center whitespace-nowrap cursor-pointer`}
               >
                 Try Demo
