@@ -57,7 +57,7 @@ app.get('/auth/google/callback',
     res.cookie('token', token, {
       httpOnly: true,
       secure: true, // set to true if using https 
-      sameSite: 'lax',
+      sameSite: 'none',
       maxAge: 24 * 60 * 60 * 1000 // 1 day
     })
 
@@ -161,7 +161,7 @@ app.post('/loginUser', async (req, res) => {
     res.cookie('token', token, {
       httpOnly: true,
       secure: true, // set to true if using https 
-      sameSite: 'lax',
+      sameSite: 'none',
       maxAge: 24 * 60 * 60 * 1000 // 1 day
     })
 
