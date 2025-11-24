@@ -10,7 +10,7 @@ export default function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     const handleLogout = () => {
-        window.location.href = 'http://localhost:3000/logout'
+        window.location.href = 'https://shimmering-nature-production.up.railway.app/logout'
     }
 
     return (
