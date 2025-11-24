@@ -146,6 +146,11 @@ function DesignPage() {
     navigate('/profile')
   }
 
+  const handleClear = async()=>{
+    setNodes([])
+    setEdges([])
+  }
+
   return (
     <>
       {isMobile ? (
@@ -190,10 +195,8 @@ function DesignPage() {
               slaLatencyMs={slaLatencyMs}
               setSlaLatencyMs={setSlaLatencyMs}
               onSave={handleSaveDesign}
-              // onExport={handleExportDesign}
-              // onClear={handleClearCanvas}
+              onClear={handleClear}
               onStartSimulation={startSimulation}
-            // isSimulating={isSimulating}
             />
 
             <div className="flex h-[calc(100vh-64px)]">
