@@ -17,21 +17,6 @@ export default function FeaturesSection() {
       icon: 'ri-bookmark-line',
       title: 'Save & Share Designs',
       description: 'Keep your architectures organized and collaborate with your team'
-    },
-    {
-      icon: 'ri-graduation-cap-line',
-      title: 'Learning Resources',
-      description: 'Built-in tutorials and best practices for system design patterns'
-    },
-    {
-      icon: 'ri-code-s-slash-line',
-      title: 'Export to Code',
-      description: 'Generate infrastructure as code from your visual designs'
-    },
-    {
-      icon: 'ri-bar-chart-line',
-      title: 'Performance Analytics',
-      description: 'Analyze bottlenecks and optimize your system architecture'
     }
   ];
 
