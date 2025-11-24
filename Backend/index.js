@@ -98,11 +98,11 @@ app.get('/designs', async (req, res) => {
 })
 
 app.post('/saveDesign', async (req, res) => {
-  const email = req.query.userEmail
-  if (!email) {
-    // redirect('http://localhost:5173/login')
-    return res.redirect('https://system-design-simulator-smoky.vercel.app/login')
-  }
+  // const email = req.query.userEmail
+  // if (!email) {
+  //   // redirect('http://localhost:5173/login')
+  //   return res.redirect('https://system-design-simulator-smoky.vercel.app/login')
+  // }
 
   const design = req.body;
   console.log("Design received at backend:", design);
