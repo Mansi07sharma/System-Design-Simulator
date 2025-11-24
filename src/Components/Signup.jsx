@@ -24,7 +24,7 @@ export default function Signup() {
         console.log(formData)
         setSignuping(true)
 
-        let response = await fetch("https://system-design-simulator-production.up.railway.app/registerUser",
+        let response = await fetch("https://shimmering-nature-production.up.railway.app/registerUser",
             {
                 method: 'POST',
                 headers: {
