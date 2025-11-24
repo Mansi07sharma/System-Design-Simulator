@@ -138,6 +138,7 @@ function DesignPage() {
         headers: {
           'Content-Type': 'application/json'
         },
+        credentials: 'include',
         body: JSON.stringify(design)
       }
     )
