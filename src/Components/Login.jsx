@@ -34,7 +34,7 @@ export default function Login() {
   }
 
   const handleLoginGoogle = () => {
-    window.location.href = "https://system-design-simulator-production.up.railway.app/auth/google";
+    window.location.href = "https://shimmering-nature-production.up.railway.app/auth/google";
   }
 
   return (
