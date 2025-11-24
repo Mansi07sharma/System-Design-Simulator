@@ -225,13 +225,13 @@ function DesignPage() {
                 </h2>
 
                 <div className="space-y-4">
-                  <textarea
+                  <textarea required
                     placeholder="Short Description"
                     className="w-full p-3 border rounded-lg"
                     onChange={(e) => setFormData({ ...formData, description: e.target.value })}
                   ></textarea>
 
-                  <input
+                  <input required
                     type="number"
                     placeholder="Number of Components"
                     className="w-full p-3 border rounded-lg"
