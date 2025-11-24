@@ -18,7 +18,7 @@ function Profile() {
         }
         const getDesigns = async () => {
             try {
-                const response = await fetch(`https://system-design-simulator-production.up.railway.app/designs?userEmail=${jwtToken.email}`);
+                const response = await fetch(`https://shimmering-nature-production.up.railway.app/designs?userEmail=${jwtToken.email}`);
                 const data = await response.json();
                 setDesigns(data);
             } catch (e) {
