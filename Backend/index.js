@@ -102,7 +102,7 @@ app.post('/saveDesign', async (req, res) => {
   const email = req.query.userEmail
   if (!email) {
     // redirect('http://localhost:5173/login')
-    redirect('https://system-design-simulator-smoky.vercel.app/login')
+    return redirect('https://system-design-simulator-smoky.vercel.app/login')
   }
 
   const design = req.body;
