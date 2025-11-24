@@ -1,4 +1,5 @@
 import { useTheme } from "../Context/ThemeContext";
+import { NavLink } from "react-router-dom";
 export default function Footer() {
     const { isDarkMode } = useTheme();
 
@@ -15,12 +16,12 @@ export default function Footer() {
                             Perfect for developers, engineers, and students.
                         </p>
                         <div className="flex">
-                            <a href="#" className={`${isDarkMode ? 'text-gray-300 hover:text-white' : 'text-gray-400 hover:text-white'} transition-colors cursor-pointer`}>
+                            <NavLink to="https://github.com/Mansi07sharma" className={`${isDarkMode ? 'text-gray-300 hover:text-white' : 'text-gray-400 hover:text-white'} transition-colors cursor-pointer`}>
                                 <i className="ri-github-fill text-2xl w-8 h-8 flex items-center justify-center"></i>
-                            </a>
-                            <a href="#" className={`${isDarkMode ? 'text-gray-300 hover:text-white' : 'text-gray-400 hover:text-white'} transition-colors cursor-pointer`}>
+                            </NavLink>
+                            <NavLink to="https://www.linkedin.com/in/mansi-sharma-03b5822b1/"  className={`${isDarkMode ? 'text-gray-300 hover:text-white' : 'text-gray-400 hover:text-white'} transition-colors cursor-pointer`}>
                                 <i className="ri-linkedin-fill text-2xl w-8 h-8 flex items-center justify-center"></i>
-                            </a>
+                            </NavLink>
                         </div>
                     </div>
                 </div>
