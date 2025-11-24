@@ -217,54 +217,69 @@ function DesignPage() {
           </div>
 
           {showModal && (
-            <div className="fixed inset-0 bg-black/40 flex items-center justify-center z-50">
-              <div className="bg-white rounded-2xl shadow-2xl w-[450px] p-6 animate-scaleSlow">
-
-                <h2 className="text-2xl font-bold text-gray-900 mb-4 text-center">
-                  Save System Design
-                </h2>
-
-                <div className="space-y-4">
-                  <textarea required
-                    placeholder="Short Description"
-                    className="w-full p-3 border rounded-lg"
-                    onChange={(e) => setFormData({ ...formData, description: e.target.value })}
-                  ></textarea>
-
-                  <input required
-                    type="number"
-                    placeholder="Number of Components"
-                    className="w-full p-3 border rounded-lg"
-                    onChange={(e) => setFormData({ ...formData, components: e.target.value })}
-                  />
-                  <input
-                    type="text"
-                    placeholder='enter url'
-                    className="w-full p-3 border rounded-lg"
-                    onChange={(e) =>
-                      setFormData({ ...formData, thumbnail: e.target.value })
-                    }
-                  />
-                </div>
-                <div className="flex justify-between mt-6">
-                  <button
-                    className="px-4 py-2 rounded-lg bg-gray-300 hover:bg-gray-400"
-                    onClick={() => setShowModal(false)}
+              <div className="fixed inset-0 bg-black/40 flex items-center justify-center z-50">
+                <div className="bg-white rounded-2xl shadow-2xl w-[450px] p-6 animate-scaleSlow">
+            
+                  <h2 className="text-2xl font-bold text-gray-900 mb-4 text-center">
+                    Save System Design
+                  </h2>
+                  <form
+                    onSubmit={(e) => {
+                      e.preventDefault();  
+                      submitDesign();     
+                    }}
+                    className="space-y-4"
                   >
-                    Cancel
-                  </button>
-
-                  <button
-                    className="px-5 py-2 rounded-lg bg-blue-600 text-white hover:bg-blue-700"
-                    onClick={() => submitDesign()}
-                  >
-                    Save
-                  </button>
+                    
+                    <textarea
+                      required
+                      placeholder="Short Description"
+                      className="w-full p-3 border rounded-lg"
+                      onChange={(e) =>
+                        setFormData({ ...formData, description: e.target.value })
+                      }
+                    ></textarea>
+            
+                    <input
+                      required
+                      type="number"
+                      placeholder="Number of Components"
+                      className="w-full p-3 border rounded-lg"
+                      onChange={(e) =>
+                        setFormData({ ...formData, components: e.target.value })
+                      }
+                    />
+            
+                    <input
+                      type="text"
+                      placeholder="Thumbnail URL (optional)"
+                      className="w-full p-3 border rounded-lg"
+                      onChange={(e) =>
+                        setFormData({ ...formData, thumbnail: e.target.value })
+                      }
+                    />
+            
+                    <div className="flex justify-between mt-6">
+                      <button
+                        type="button"
+                        className="px-4 py-2 rounded-lg bg-gray-300 hover:bg-gray-400"
+                        onClick={() => setShowModal(false)}
+                      >
+                        Cancel
+                      </button>
+            
+                      <button
+                        type="submit"
+                        className="px-5 py-2 rounded-lg bg-blue-600 text-white hover:bg-blue-700"
+                      >
+                        Save
+                      </button>
+                    </div>
+                  </form>
+            
                 </div>
-
               </div>
-            </div>
-          )}
+            )}
 
           {showResults && <div className="fixed inset-0 bg-black/40 "><ResultPage results={result} setShowResults={setShowResults} /></div>}
         </>
