@@ -84,25 +84,6 @@ export default function Documentation() {
                         globally for faster delivery.
                     </p>
 
-                    <p className="mb-3">
-                        <strong>Reverse Proxy:</strong> Handles routing and
-                        provides additional security for backend servers.
-                    </p>
-
-                    <p className="mb-3">
-                        <strong>Firewall:</strong> Protects the system by
-                        blocking unauthorized access.
-                    </p>
-
-                    <p className="mb-3">
-                        <strong>Monitoring System:</strong> Tracks errors,
-                        performance and logs.
-                    </p>
-
-                    <p className="mb-3">
-                        <strong>Analytics Engine:</strong> Processes and
-                        visualizes user activity data.
-                    </p>
                 </section>
 
                 {/* AUTHENTICATION DOCUMENTATION */}
