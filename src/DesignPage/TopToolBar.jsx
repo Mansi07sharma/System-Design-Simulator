@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom"
 
-function TopToolBar({ designTitle, setDesignTitle, isDarkMode, setIsDarkMode ,workloadRps, setWorkloadRps, slaLatencyMs, setSlaLatencyMs, onSave, onStartSimulation}) {
+function TopToolBar({ designTitle, setDesignTitle, isDarkMode, setIsDarkMode ,workloadRps, setWorkloadRps, slaLatencyMs, setSlaLatencyMs, onClear, onSave, onStartSimulation}) {
     return (
         <div className={`${isDarkMode ? 'bg-gray-800 border-gray-700' : 'bg-white border-gray-200'} border-b h-16 px-4 flex items-center justify-between transition-colors duration-200`}>
             <div className="flex items-center space-x-6">
@@ -49,7 +49,7 @@ function TopToolBar({ designTitle, setDesignTitle, isDarkMode, setIsDarkMode ,wo
                     Export
                 </button>
 
-                <button className={`${isDarkMode ? 'text-red-400 hover:bg-red-900/20' : 'text-red-600 hover:bg-red-50'} px-4 py-2 rounded-lg font-medium transition-colors whitespace-nowrap cursor-pointer`}>
+                <button onClick={onClear} className={`${isDarkMode ? 'text-red-400 hover:bg-red-900/20' : 'text-red-600 hover:bg-red-50'} px-4 py-2 rounded-lg font-medium transition-colors whitespace-nowrap cursor-pointer`}>
                     <i className="ri-delete-bin-line w-4 h-4 items-center justify-center mr-2 inline-flex"></i>
                     Clear
                 </button>
